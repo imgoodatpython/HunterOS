@@ -1,8 +1,8 @@
 # HunterOS
- A 5.133 KB micro‑OS shell written in Python. 10.52631× smaller than MS‑DOS command.com.
+ A 3.247kb micro‑OS shell written in Python. 17× smaller than MS‑DOS command.com.
  # HunterOS
 
-HunterOS is a fully functional micro‑OS shell written in Python, with a total size of **5.133 KB (5,254 bytes)** — making it **10.52631× smaller than MS‑DOS command.com** while still providing a complete command environment.
+HunterOS is a fully functional micro‑OS shell written in Python, with a total size of **3.17 KB (3,247 bytes)** — making it **17× smaller than MS‑DOS command.com** while still providing a complete command environment.
 
 ## Features
 - Boot animation
@@ -23,7 +23,8 @@ HunterOS is a fully functional micro‑OS shell written in Python, with a total 
 
 ## Size Achievement
 HunterOS is:
-- **10.52631× smaller** than MS‑DOS command.com (54 KB)
+- **17× smaller** than MS‑DOS command.com (54 KB)
+- **20× smaller** than Windows Calculator (≈65 KB)
 - Small enough to fit inside the IBM PC memory model
 - One of the smallest fully functional Python OS shells ever created
 
