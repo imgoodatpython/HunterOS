@@ -34,7 +34,7 @@ print(f"C: {t//(1024**3)}GB total, {us//(1024**3)}GB used, {fr//(1024**3)}GB fre
 print("welcome",owner)
 
 CMDS=["calc","osedit","mkfolder","rmdir","view","rename","ls",
-      "tasks","clear","shutdown","passwd","size","reboot"]
+      "tasks","clear","shutdown","passwd","help","size","reboot"]
 print("cmds:",", ".join(CMDS))
 
 # Main loop
