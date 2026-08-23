@@ -35,6 +35,22 @@ print("welcome",owner)
 
 CMDS=["calc","osedit","mkfolder","rmdir","view","rename","ls",
       "tasks","clear","shutdown","passwd","help","size","reboot"]
+DESC=[
+    "calc: Simple calculator. Supports +, -, *, / using eval().",
+    "OSedit: Create or delete files. make → create file, del → delete file.",
+    "mkfolder: Create a new folder in the current directory.",
+    "rmdir: Delete an empty folder.",
+    "view: Display the contents of a text file.",
+    "rename: Rename a file or folder.",
+    "ls: List all files and folders in the current directory.",
+    "tasks: Owner-only. Shows all available commands.",
+    "clear: Clears the screen.",
+    "shutdown: Exit HunterOS.",
+    "passwd: Owner-only. Change your password. Requires old password + confirmation.",
+    "help: Shows all commands.",
+    "size: Shows the size of a file in bytes.",
+    "reboot: Restarts HunterOS using os.execl."
+]
 print("cmds:",", ".join(CMDS))
 
 # Main loop
@@ -46,7 +62,7 @@ while True:
         os.execl(sys.executable, sys.executable, *sys.argv)
 
     elif a=="help":
-        print("cmds:"); [print(" ",c) for c in CMDS]
+        print("cmds:"); [print(" ",d) for d in DESC]
 
     elif a=="passwd":
         if own!="yes": print(col("owner only",RD)); continue
