@@ -1,4 +1,4 @@
-import time, os, shutil, sys
+import time, os, shutil, sys, math
 
 P = {}  # passwords
 R="\033[0m"; RD="\033[31m"; GR="\033[32m"
@@ -67,10 +67,10 @@ while True:
     elif a=="version":
         print("version 1.2 beta")
 
-    if a=="whoami":
+    elif a=="whoami":
         print(f"username:{u}, password:{P[u]}, owner Y/N:{own}")
 
-    if a=="reboot":
+    elif a=="reboot":
         print("rebooting..."); time.sleep(1)
         os.execl(sys.executable, sys.executable, *sys.argv)
 
@@ -136,11 +136,24 @@ while True:
         else: print("error")
 
     elif a in ("calc","calculator"):
-        a1=float(input("a: "))
-        op=input("op: ")
-        a2=float(input("b: "))
-        try: print(eval(f"{a1}{op}{a2}"))
-        except: print("invaild")
+        a1=float(input("number1: "))
+        op=input("symbol (+, -, *, /, //, %, **, sqrt): ").lower()
+        if op == "sqrt":
+            try:
+                if a1 < 0:
+                    raise ValueError
+                print(math.sqrt(a1))
+            except ValueError:
+                print("invaild")
+            continue
+        a2=float(input("number2: "))
+        if op not in ("+", "-", "*", "/", "**", "//", "%"):
+            print("invaild")
+            continue
+        try:
+            print(eval(f"{a1}{op}{a2}"))
+        except (ArithmeticError, ValueError):
+            print("invaild")
 
     else:
         print("invalid\n")
