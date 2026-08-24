@@ -1,5 +1,5 @@
 # HunterOS
- A 4.38kb micro‑OS shell written in Python. 17× smaller than MS‑DOS command.com.
+ A 4.81kb micro‑OS shell written in Python. 17× smaller than MS‑DOS command.com.
 # LICENSE
 Licensed under HunterOS License v1.0
 
